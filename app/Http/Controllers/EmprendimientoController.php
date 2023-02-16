@@ -339,7 +339,9 @@ class EmprendimientoController extends Controller
             'whatsapp' => ['string', 'min:4', 'max:50'],
             'facebook' => ['string', 'min:4', 'max:255'],
             'instagram' => ['string', 'min:4', 'max:255'],
-            'descuento'=>['numeric', 'min:1', 'max:2'],
+         
+
+            'descuento'=>['numeric', 'digits_between:1,2'],
             'image' => ['nullable', 'image', 'mimes:jpg,png,jpeg', 'max:512'],
         ]);
         $emprendimiento_data = $request->all();
